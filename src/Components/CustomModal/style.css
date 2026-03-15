@@ -1,0 +1,76 @@
+.modal-content {
+  min-width: 304px;
+}
+.modalpara {
+  max-width: 305px;
+  margin-bottom: 10px !important;
+  margin: 0 auto;
+  color: #656565;
+  text-transform: capitalize;
+}
+
+.modalTitle {
+  font-size: 28px;
+  font-weight: 600;
+  color: #0b0b0b;
+}
+.modalButton {
+  font-size: 16px;
+}
+.modalContent {
+  padding-block: 2rem;
+}
+.modal-backdrop {
+  --bs-backdrop-opacity: 0.8;
+}
+.modalLoader {
+  margin-top: 10px;
+  margin-bottom: 9px;
+  span {
+    background-color: var(--secondary-color) !important;
+  }
+}
+.modalImageWrapper {
+  width: 100px;
+  height: 100px;
+}
+.kaata {
+  border: 1px solid #ff00004d !important;
+  transition: 0.15s ease-out;
+}
+.kaata:hover {
+  background: #ff00004d;
+  transition: none;
+}
+.modalText {
+  color: #646464;
+  margin: 0;
+}
+.modalInputs .mainInput {
+  background-color: #fff !important;
+  color: #0b0b0b !important;
+}
+.modalInputs label {
+  color: #0b0b0b !important;
+}
+.modal-body {
+  padding-top: 0px !important;
+}
+.modal-body .secondaryButton {
+  color: #0b0b0b !important;
+}
+.modal-body select {
+  background-color: #fff !important;
+  color: #0b0b0b !important;
+}
+.modal-body .customTable {
+  min-height: 186px;
+}
+@media screen and (max-width: 991px) {
+  .modalHeading {
+    font-size: 22px;
+  }
+  .modalText {
+    font-size: 16px;
+  }
+}

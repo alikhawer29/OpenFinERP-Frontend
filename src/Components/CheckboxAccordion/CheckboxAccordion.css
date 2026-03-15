@@ -1,0 +1,51 @@
+.checkbox-accordion {
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.checkbox-accordion-header {
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.checkbox-accordion-title {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--contrast-text-color);
+}
+
+.checkbox-accordion-icon {
+  transition: transform 0.2s ease-out;
+}
+
+.checkbox-accordion.open .checkbox-accordion-icon {
+  transform: rotate(-180deg);
+}
+
+.checkbox-accordion-content {
+  overflow: hidden;
+  transition: height 0.2s ease-out;
+}
+
+.checkbox-accordion-content-inner {
+  padding: 1rem;
+}
+
+.checkbox-accordion .checkbox-component-wrapper {
+  margin-bottom: 8px;
+  background-color: transparent;
+  border: none;
+  padding: 4px;
+}
+
+.checkbox-accordion-header .checkbox-component-wrapper {
+  margin-bottom: 0;
+}

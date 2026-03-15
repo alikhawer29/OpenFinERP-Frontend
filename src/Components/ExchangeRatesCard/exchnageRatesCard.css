@@ -1,0 +1,17 @@
+.toggleLabel {
+  color: var(--table-td-color);
+  cursor: pointer;
+}
+
+.exchangeRatesTable thead tr {
+  border-bottom: 1px solid rgba(100, 100, 100, 0.22);
+}
+.exchangeRatesTable th {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  padding: 8px 0;
+}
+
+.exchangeRatesTable td {
+  color: var(--table-td-color);
+}

@@ -1,0 +1,49 @@
+.fileRemoveButton {
+  width: 23px;
+  height: 23px;
+  z-index: 1;
+  border-radius: 340px;
+  color: black;
+  position: absolute;
+  top: -10px;
+  right: -28px;
+  border-width: 1px;
+  background-color: white;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.fileRemoveButton {
+  position: relative;
+  top: unset;
+  right: unset;
+}
+.uploadedFiles {
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  max-width: 200px;
+  border: 1px solid rgba(100, 100, 100, 0.22);
+}
+.nameIconWrapper {
+  overflow: hidden;
+  display: flex;
+  flex: 1;
+  gap: 4px;
+  width: 150px;
+}
+.fileName {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-block: auto;
+}
+.size {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+}

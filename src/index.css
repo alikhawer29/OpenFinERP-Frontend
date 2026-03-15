@@ -1,0 +1,297 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import url('./assets/fonts/stylesheet.css');
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  /* font-family: "Inter", system-ui, Helvetica, Arial, sans-serif; */
+  min-width: 320px;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Hide number input spinners in Firefox */
+input[type=number] {
+  -moz-appearance: textfield !important;
+}
+
+:root {
+  font-family: 'Poppins', system-ui, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --hyper-link: #0061ff;
+  --primary-color: #1f4047;
+  --secondary-color: #fdc770;
+  --body-bg-color: #f5f5f5;
+  --content-bg-color: #ffffff;
+  --border-color-light: #e6e6e6;
+
+  --dash-icon-color: #1f4047; /* Dashboard icons */
+  --dash-icon-wrapper-bg: #f4f7fe; /* Dashboard icon wrapper */
+
+  --pagination-bg-color: #1f4047; /* For table pagination */
+  --pagination-text-color: #000;
+  --pagination-hover-text-color: #000;
+
+  --primary-text-color: #000;
+  --secondary-text-color: #646464; /* Placeholder and? */
+  --colored-heading: #1f4047; /* For headings matching primary color */
+  --contrast-text-color: #fff; /* For Sidebar text */
+  --detail-label-color: #646464; /* Details pages field label color */
+  --table-td-color: #000000d0;
+
+  --input-bg-color: #fff;
+  --input-label-color: #292929;
+  --input-placeholder-color: #292929;
+  --input-focus-color: #1f4047;
+
+  --btn-primary-color: #fdc770;
+  --btn-secondary-color: #1f4047;
+  --btn-text-color: #000;
+  --btn-text-hover-color: #fff;
+
+  --disabled-color: #b0b0b0;
+  --success: #00bb06;
+  --bs-success: #00cc08;
+  --bs-success-rgb: 0, 204, 8;
+  --danger: #f00;
+  --warning: #ffb818; /* #92400e */
+  --info: #0075ff;
+  & body {
+    background-color: var(--body-bg-color);
+    font-family: 'Poppins';
+    color: var(--primary-text-color);
+  }
+}
+
+[data-theme='dark-teal'] {
+  --primary-color: #1f4047;
+  --secondary-color: #fdc770;
+  --body-bg-color: #f5f5f5;
+  --content-bg-color: #ffffff;
+
+  --dash-icon-color: #1f4047;
+  --dash-icon-wrapper-bg: #f4f7fe;
+
+  --pagination-bg-color: #1f4047;
+  --pagination-text-color: #fff;
+  --pagination-hover-text-color: #000;
+
+  --primary-text-color: #000;
+  --secondary-text-color: #646464;
+  --colored-heading: #1f4047;
+  --contrast-text-color: #fff;
+  --detail-label-color: #646464;
+  --table-td-color: #000000d0;
+
+  --input-bg-color: #fff;
+  --input-label-color: #292929;
+  --input-focus-color: #1f4047;
+
+  --btn-primary-color: #fdc770;
+  --btn-secondary-color: #1f4047;
+  --btn-text-color: #000;
+  --btn-text-hover-color: #fff;
+}
+
+[data-theme='purple'] {
+  --primary-color: #12035f;
+  --secondary-color: #8635fd;
+  --body-bg-color: #f4f7fe;
+  --content-bg-color: #ffffff;
+
+  --dash-icon-color: #12035f;
+  --dash-icon-wrapper-bg: #f4f7fe;
+
+  --pagination-bg-color: #12035f;
+  --pagination-text-color: #fff;
+  --pagination-hover-text-color: #fff;
+
+  --primary-text-color: #000;
+  --secondary-text-color: #646464;
+  --colored-heading: #12035f;
+  --contrast-text-color: #fff;
+  --detail-label-color: #646464;
+  --table-td-color: #000000d0;
+
+  --input-bg-color: #fff;
+  --input-label-color: #292929;
+  --input-focus-color: #8635fd;
+
+  --btn-primary-color: #12035f;
+  --btn-secondary-color: #8635fd;
+  --btn-text-color: #fff;
+  --btn-text-hover-color: #fff;
+}
+
+[data-theme='teal'] {
+  --primary-color: #0f4841;
+  --secondary-color: #0fb7c1;
+  --body-bg-color: #f3f3f3;
+  --content-bg-color: #ffffff;
+
+  --dash-icon-color: #0f4841;
+  --dash-icon-wrapper-bg: #f4f7fe;
+
+  --pagination-bg-color: #0f4841;
+  --pagination-text-color: #fff;
+  --pagination-hover-text-color: #000;
+
+  --primary-text-color: #000;
+  --secondary-text-color: #646464;
+  --colored-heading: #0f4841;
+  --contrast-text-color: #fff;
+  --detail-label-color: #646464;
+  --table-td-color: #000000d0;
+
+  --input-bg-color: #fff;
+  --input-label-color: #292929;
+  --input-focus-color: #0fb7c1;
+
+  --btn-primary-color: #0f4841;
+  --btn-secondary-color: #0fb7c1;
+  --btn-text-color: #fff;
+  --btn-text-hover-color: #000;
+}
+
+[data-theme='blue'] {
+  --primary-color: #0075ff;
+  --secondary-color: #dcdcdc;
+  --body-bg-color: #0b1326;
+  --content-bg-color: #19233a;
+
+  --dash-icon-color: #0075ff;
+  --dash-icon-wrapper-bg: #dcdcdc;
+
+  --pagination-bg-color: #0075ff;
+  --pagination-text-color: #fff;
+  --pagination-hover-text-color: #000;
+
+  --primary-text-color: #fff;
+  --secondary-text-color: #ada7a7;
+  --colored-heading: #fff;
+  --contrast-text-color: #fff;
+  --detail-label-color: #fff;
+  --table-td-color: #fff;
+
+  --input-bg-color: #0b1326;
+  --input-label-color: #fff;
+  --input-focus-color: #0075ff;
+
+  --btn-primary-color: #0075ff;
+  --btn-secondary-color: #dcdcdc;
+  --btn-text-color: #fff;
+  --btn-text-hover-color: #000;
+}
+[data-theme='yellow'] {
+  --primary-color: #fdc770;
+  --secondary-color: #2f4858;
+  --body-bg-color: #212121;
+  --content-bg-color: #000000;
+
+  --dash-icon-color: #2f4858;
+  --dash-icon-wrapper-bg: #fdc770;
+
+  --pagination-bg-color: #fdc770;
+  --pagination-text-color: #000;
+  --pagination-hover-text-color: #fff;
+
+  --primary-text-color: #fff;
+  --secondary-text-color: #646464;
+  --colored-heading: #fdc770;
+  --contrast-text-color: #000;
+  --detail-label-color: #fff;
+  --table-td-color: #fff;
+
+  --input-bg-color: #0d0d0d;
+  --input-label-color: #fff;
+  --input-focus-color: #fdc770;
+
+  --btn-primary-color: #fdc770;
+  --btn-secondary-color: #2f4858;
+  --btn-text-color: #000;
+  --btn-text-hover-color: #fff;
+}
+
+.selected-row {
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+
+.highlight-marked {
+  color: var(--danger) !important;
+  font-weight: 500;
+}
+
+/* Group striping for Journal Report rows */
+.journal-stripe-row {
+  background-color: #f0ecec;
+}

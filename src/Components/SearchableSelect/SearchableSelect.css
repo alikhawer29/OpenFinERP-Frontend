@@ -1,0 +1,55 @@
+/* SearchableSelect custom styles */
+.searchable-select-menu-list {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  height: 100%;
+}
+
+.scrollable-options {
+  max-height: 200px;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  scrollbar-width: thin; /* For Firefox */
+  position: relative;
+  z-index: 1;
+  will-change: scroll-position; /* Optimize for scrolling */
+  touch-action: pan-y; /* Allow vertical touch scrolling */
+}
+
+.fixed-add-new-option {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the Add New GL option */
+.fixed-add-new-option > div {
+  text-align: center !important;
+  font-weight: 500;
+}
+
+/* Custom scrollbar styling */
+.scrollable-options::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-options::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+.scrollable-options::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.scrollable-options::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}

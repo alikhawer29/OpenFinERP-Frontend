@@ -1,0 +1,74 @@
+.code-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 0;
+}
+.code-container .code:hover::placeholder,
+.code-container .code:focus::placeholder {
+  color: #fff;
+}
+.code-container .code {
+  border-radius: 10px;
+  font-size: 32px;
+  height: 75px;
+  width: 75px;
+  border: 1px solid #d9dee8;
+  margin: 1.3%;
+  text-align: center;
+  font-weight: 600;
+  -moz-appearance: textfield;
+  color: #999999;
+  outline: none;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+.code::-webkit-outer-spin-button,
+.code::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.code input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.code-container .code:hover,
+input[type='number']:hover {
+  -moz-appearance: textfield;
+}
+
+.code-container .code:hover {
+  border: 0;
+  background-color: var(--primaryColor);
+  background-color: var(--primaryColor);
+  color: #fff;
+}
+.code-container .code:focus-visible {
+  opacity: 1;
+  color: #fff;
+  background-color: var(--primaryColor);
+  background-color: var(--primaryColor);
+}
+.code-container .code:focus {
+  border: 0;
+}
+
+.login-form .inputWrapper {
+  margin-bottom: 0 !important;
+}
+
+.resend-btn {
+  outline: none;
+  border: none;
+  background: none;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 15px;
+}
+.redColor {
+  color: #ff0000;
+}

@@ -1,0 +1,35 @@
+.notification-card {
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--body-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color 0.3s ease-out;
+  font-size: 16px;
+}
+.notification-card.unread {
+  background-color: color-mix(
+    in srgb,
+    var(--secondary-color) 15%,
+    transparent 85%
+  );
+}
+.notification-status-button {
+  flex-shrink: 0;
+}
+.date-and-time p {
+  display: inline;
+  color: var(--detail-label-color);
+}
+@media screen and (max-width: 767px) {
+  .notification-card {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .notification-card {
+    font-size: 13px;
+  }
+}

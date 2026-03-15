@@ -1,0 +1,33 @@
+Page Specific
+
+General
+- Add RightIcon for Date type input
+- focus on input when modal opens
+- Modal button disable/loading in delete pages
+- Jerk in User Maintenance Page on checkboxes
+
+Enhancements
+- Loader in Subscription Logs
+- Loader in Change Subscription
+- MultiLevelDropdown animation
+- Fix Add more VAT button in Branch Management
+- Add a better 404 page
+- Create combined SearchableSelect. Search for 'MergeSelect' in codebase.
+- Remittance ROE fix default add row (action is missing)
+- outOfScope is not being saved in formStore (New/Edit ReceiptVoucher)
+- Optimistically update statuses every where
+- import whole module screens from one file for freelance work - App.jsx
+
+- User edits amount after filling special Commission (should we clear SC?)
+- SC data not setting if we go to ROE page but sets if we visit SC page once and come back
+- What rate to get when editing a voucher.
+    If we don't fetch a rate, then user switches currency which date's rate should be fetched, today's or the date when user created the voucher?
+    What happens if user selects the original currency again should we keep the original data or fetch rate again and recalculate data (if needed)
+- FormatNumberForDisplay -> Bring consistency in values across vouchers. E.g SCText data
+- Create hooks for common queries that make dropdown options. E.g Vat, banks, cheques...
+- use SearchableSelect in CustomFilters instead of CustomSelect
+
+Issues:
+- Fix PDCR Payment Posting filters (received from is not working)
+- Fix Secondary button disable css (border is still showing)
+- Fix Action buttons hover effects (remove individual classes, use var for colors, darken color on hover (color-mix?))

@@ -1,0 +1,46 @@
+.backButton {
+  border: none;
+  background-color: unset;
+  color: var(--primary-text-color);
+  font-size: 14px;
+  font-style: normal;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+  transition: 0.2s ease-out;
+  padding: 0;
+  & p {
+    margin-top: 2px;
+    margin-bottom: 0;
+    margin-left: 8px;
+  }
+}
+
+.backButton:hover {
+  transition: none;
+  color: var(--primary-color);
+}
+.backButton:active {
+  color: color-mix(in srgb, var(--primary-color) 70%, black 30%) !important;
+}
+@media screen and (max-width: 767px) {
+  .backButton {
+    font-size: 13px;
+    svg {
+      height: 20px;
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .backButton {
+    margin-right: 8px;
+    font-size: 12px;
+    & p {
+      margin-top: 0;
+      margin-left: 6px;
+    }
+    svg {
+      height: 17px;
+    }
+  }
+}

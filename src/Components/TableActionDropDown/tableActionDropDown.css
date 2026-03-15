@@ -1,0 +1,111 @@
+.table-action-wrapper button {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: none !important;
+  color: var(--input-label-color);
+}
+.table-action-wrapper .action-icon:active,
+.table-action-wrapper .action-icon:hover,
+.table-action-wrapper .action-icon:focus 
+{
+  color: var(--primary-color) !important;
+  outline: 2px solid var(--primary-color) !important;
+  outline-offset: 2px !important;
+}
+
+.table-action-wrapper button.show {
+  color: var(--input-label-color) !important;
+}
+.table-action-wrapper {
+  position: relative !important;
+  text-align: center;
+}
+.table-action-wrapper .dropdown-menu {
+  width: max-content;
+  background-color: var(--content-bg-color);
+  box-shadow: 0px 4px 17px -6px color-mix(in srgb, rgba(0, 0, 0, 0.25) 50%, var(
+          --primary-color
+        )
+        50%) !important;
+  border-radius: 8px;
+  overflow: hidden;
+  border: none !important;
+  padding: 0;
+  z-index: 500;
+}
+.table-action-wrapper .dropdown-menu .dropdown-item:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.table-action-wrapper .dropdown-menu .dropdown-item {
+  padding: 10px 14px !important;
+  font-size: 14px;
+}
+.navbar .table-action-wrapper .dropdown-menu .dropdown-item {
+  color: var(--input-label-color);
+}
+.table-action-wrapper .dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: transparent !important;
+}
+.table-action-wrapper .dropdown-item:focus {
+  outline: 2px solid var(--primary-color) !important;
+  outline-offset: -2px !important;
+}
+.navbar .table-action-wrapper .dropdown-item.bg-hover:focus,
+.navbar .dropdown-item.bg-hover:hover {
+  background-color: color-mix(
+    in srgb,
+    transparent 90%,
+    var(--input-label-color) 10%
+  ) !important;
+}
+.tableAction .disabled {
+  background-color: transparent !important;
+  cursor: not-allowed !important;
+  color: color-mix(
+    in srgb,
+    transparent 75%,
+    var(--input-label-color) 25%
+  ) !important;
+}
+
+/* Add focus styles for the action buttons - only for table icons, not dropdown items */
+.tableAction span[role="button"]:focus {
+  outline: 2px solid var(--primary-color) !important;
+  outline-offset: 2px !important;
+  border-radius: 4px !important;
+}
+
+.tableAction span[role="button"]:focus:not(.disabled) {
+  color: var(--primary-color) !important;
+}
+
+/* Remove focus styles from dropdown toggle button */
+.table-action-wrapper .dropdown-toggle:focus {
+  outline: none !important;
+  outline-offset: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Remove focus styles from dropdown menu items */
+.table-action-wrapper .dropdown-menu .dropdown-item:focus {
+  outline: none !important;
+  outline-offset: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Prevent focus styles on disabled items */
+.tableAction .disabled:focus,
+.tableAction span[role="button"].disabled:focus,
+.table-action-wrapper .dropdown-item.disabled:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure disabled items have no focus visibility */
+.tableAction .disabled:focus,
+.tableAction span[role="button"].disabled:focus {
+  outline: none !important;
+  outline-offset: 0 !important;
+  border: none !important;
+}

@@ -1,0 +1,10 @@
+/* CommissionTypeDisplay component styles */
+.commission-type-display {
+  cursor: pointer;
+}
+
+/* Tooltip styles are inherited from the global tooltip-toggle class */
+.commission-type-display[title] {
+  cursor: help;
+}
+

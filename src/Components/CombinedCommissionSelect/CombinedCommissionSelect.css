@@ -1,0 +1,75 @@
+.combined-select-container {
+  /* margin-bottom: 1.5rem; */
+  position: relative;
+}
+
+.combined-select-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(100, 100, 100, 0.22);
+  border-radius: 5px;
+  background-color: var(--input-bg-color, white);
+  margin-top: 2px;
+  overflow: visible;
+  height: 47px;
+  padding: 4px 0px 5px 4px;
+}
+
+.combined-select-input:hover {
+  border-color: var(--primary-color, #39ae94) !important;
+}
+
+.combined-select-left,
+.combined-select-right {
+  flex: 1;
+  position: relative;
+}
+
+.separator {
+  padding: 0 8px;
+  color: rgba(100, 100, 100, 0.5);
+  font-weight: normal;
+  font-size: 16px;
+}
+.separator-between-selects {
+  padding: 0 8px;
+  color: rgba(100, 100, 100, 0.5);
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.commission-input,
+.commission-amount-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  padding: 0 12px;
+  color: var(--input-label-color, #333);
+}
+
+.commission-input:focus,
+.commission-amount-input:focus {
+  outline: none;
+}
+
+.commission-input:disabled,
+.commission-amount-input:disabled {
+  background-color: transparent;
+  cursor: not-allowed;
+}
+
+.commission-input::placeholder,
+.commission-amount-input::placeholder {
+  color: #666;
+}
+
+.error-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-error-message {
+  font-size: 12px;
+  margin-top: 4px;
+}

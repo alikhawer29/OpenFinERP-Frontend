@@ -1,0 +1,172 @@
+/*************** Pagination  START ************/
+div.dataTables_paginate {
+  padding: 0px 0;
+  margin: 0 0px 0 0 !important;
+  font-weight: 300;
+  box-shadow: 0 10px 10px 0 rgb(158 158 158 / 8%),
+    0 0px 0px 0 rgb(218 218 218 / 93%);
+  border-radius: 10px;
+}
+
+ul.pagination {
+  margin: 0 0px 0 0 !important;
+  font-weight: 400;
+  border-radius: 8px;
+}
+
+.page-item .page-link {
+  border-color: var(--pagiBorderColor);
+  border-style: solid;
+  border-width: 1px 0px 1px 0px;
+  padding: 10px 20px;
+  color: var(--paginationColor);
+  font-size: 16px;
+  font-weight: 500;
+  background-color: transparent;
+}
+
+.page-item:first-child a,
+.page-item:last-child a {
+  text-align: center;
+  background: transparent;
+  padding: 10px 20px;
+  color: #2b2541;
+  border-top: 1px solid var(--pagiBorderColor);
+  border-bottom: 1px solid var(--pagiBorderColor);
+  display: block;
+  height: 46px;
+  line-height: 1.6;
+}
+
+.page-item:first-child a {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-left: 1px solid var(--pagiBorderColor);
+}
+/* 
+.page-item:last-child a {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-right: 1px solid var(--pagiBorderColor);
+} */
+
+.page-item.disabled {
+  display: flex;
+}
+
+.page-item.disabled .page-link {
+  color: #333333;
+  pointer-events: none;
+  background-color: #fff;
+  border-color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-transform: capitalize;
+  outline: none;
+}
+.pagination li {
+  position: relative;
+}
+
+/* .pagination li:not(:first-child):not(:last-child)::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 20px;
+  background-color: var(--primary-text-color) !important;
+  right: 0;
+  top: 12px
+} */
+
+.page-item:first-child a:hover,
+.page-item:last-child a:hover,
+.page-item.active .page-link,
+.page-item .page-link:hover,
+.page-item .page-link:focus {
+  z-index: 3;
+  color: #000;
+  background: var(--secondary-color);
+  border-color: var(--pagiBorderColor);
+  outline: 0;
+  box-shadow: none;
+}
+
+.page-item .page-link:hover:before {
+  display: none;
+}
+
+.page-item:nth-child(2) .page-link::before,
+.page-item:last-child .page-link::before,
+.page-item.active .page-link::before {
+  display: none;
+}
+
+/*************** Pagination  END ************/
+
+.customPagination .pagination {
+  /* background-color: var(--content-bg-color); */
+  filter: drop-shadow(0px 5.333px 5.333px rgba(247, 236, 232, 0.04));
+}
+
+.paginationText {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+}
+
+.customPagination {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.pagination a {
+  text-decoration: none;
+  padding: 10px 16px;
+  min-width: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.1s ease-out;
+  color: var(--primary-text-color);
+  background-color: var(--content-bg-color);
+  user-select: none;
+  margin-right: 4px !important;
+}
+.pagination a:last-child {
+  margin-right: 0px;
+}
+
+.pagination a:hover {
+  transition: none;
+  text-decoration: none;
+  background-color: var(--secondary-color);
+  color: var(--pagination-hover-text-color) !important;
+}
+
+.pagination .active a {
+  background-color: var(--pagination-bg-color);
+  font-weight: 600;
+  border-color: transparent;
+  color: var(--pagination-text-color) !important;
+}
+.pagination li.previous.disabled,
+.pagination li.next {
+  background-color: unset !important;
+}
+.pagination .break-me {
+  cursor: default;
+  color: #666;
+}

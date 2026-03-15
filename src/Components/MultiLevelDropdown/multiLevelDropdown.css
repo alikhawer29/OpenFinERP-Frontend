@@ -1,0 +1,105 @@
+.dropdown-container {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dropdown-container > .menu-item {
+  margin-bottom: 12px;
+}
+.menu-item {
+  width: 100%;
+}
+.menu-item-children .menu-item-content {
+  border: none;
+  padding-block: 0.5rem;
+}
+
+.menu-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  border: 1px solid #e2e8f0;
+  border-radius: 5px;
+}
+.menu-item-content p {
+  transition: all 0.2s ease-out;
+  color: var(--input-label-color);
+}
+.menu-item-content .menu-item-content-icon {
+  border-radius: 99px;
+  path {
+    fill: var(--table-td-color);
+  }
+}
+.menu-item-content:hover p {
+  color: var(--pagination-hover-text-color);
+}
+.menu-item-content-icon-wrapper {
+  margin-right: -0.5rem;
+  transition: all 0.2s ease-out;
+  border-radius: 99px;
+}
+.menu-item-content-icon-wrapper:hover {
+  background-color: color-mix(
+    in srgb,
+    var(--contrast-text-color) 20%,
+    transparent 80%
+  );
+}
+.menu-item-content-icon-wrapper:active {
+  transition: none;
+  background-color: color-mix(
+    in srgb,
+    var(--contrast-text-color) 60%,
+    transparent 40%
+  );
+}
+.menu-item .tableAction svg {
+  path {
+    stroke: var(--contrast-td-color);
+  }
+}
+.menu-item-content.active svg {
+  path {
+    fill: var(--contrast-text-color);
+  }
+}
+.menu-item-content:hover .menu-item-content-icon {
+  path {
+    fill: var(--pagination-hover-text-color);
+  }
+}
+.menu-item-content:hover {
+  background-color: var(--secondary-color);
+  /* color: var(--input-label-color); */
+  color: var(--pagination-hover-text-color);
+}
+.menu-item-content.active {
+  margin-block: 2px;
+}
+.menu-item-content.active .menu-item-content-icon {
+  path {
+    fill: var(--contrast-text-color);
+  }
+}
+.menu-item-content.active,
+.menu-item-content.active p {
+  background-color: var(--primary-color);
+  color: var(--contrast-text-color);
+}
+
+.menu-item-children {
+  width: 100%;
+}
+.menu-item .tableAction {
+  padding: 0;
+  width: unset;
+}
+.menu-item .table-action-wrapper .dropdown-menu {
+  min-width: unset !important;
+}

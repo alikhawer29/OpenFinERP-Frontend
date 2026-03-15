@@ -1,0 +1,48 @@
+/* hide spinbox of number inputs */
+.debit-credit-inputs input::-webkit-outer-spin-button,
+.debit-credit-inputs input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.debit-credit-inputs input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.debit-credit-inputs {
+  pointer-events: none;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.table-selected-row {
+  cursor: 'pointer';
+  background-color: color-mix(
+    in srgb,
+    var(--primary-color) 15%,
+    transparent 85%
+  );
+}
+.table-selected-row:hover {
+  background-color: color-mix(
+    in srgb,
+    var(--primary-color) 15%,
+    transparent 85%
+  ) !important;
+}
+
+/* override for specific case */
+.tooltip-toggle-high::before {
+  top: -60px;
+}
+.tooltip-toggle-high::after {
+  display: none;
+}

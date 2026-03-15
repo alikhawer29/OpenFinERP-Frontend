@@ -1,0 +1,273 @@
+.sidebar {
+  width: 270px;
+  position: fixed;
+  transition: all 0.3s ease-out;
+  background: var(--primary-color);
+  z-index: 6;
+  height: 100%;
+  top: 0;
+  -ms-overflow-style: none;
+  overflow: hidden;
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+.sideLink {
+  /* font-family: "Poppins"; */
+  font-size: 15px;
+  font-weight: 500;
+  height: 55px;
+  text-decoration: none;
+  color: var(--contrast-text-color);
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.8rem 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/*----- Sidebar Collapsed Start -----*/
+
+.sidebar.collapsed {
+  width: 60px;
+  text-align: center;
+}
+
+.sidebar:hover.collapsed {
+  width: 270px;
+  position: fixed;
+  transition: all 0.3s ease-out;
+  background: var(--primary-color);
+  z-index: 6;
+  height: 100%;
+  top: 0;
+  -ms-overflow-style: none;
+  overflow: hidden;
+}
+
+
+/*----- Sidebar Collapsed End -----*/
+
+.dropdown-container {
+  color: var(--secondary-color);
+  overflow-y: auto;
+  height: calc(100% - 78px);
+}
+
+.sidebar-title-wrapper {
+  height: 78px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-title {
+  margin: 0;
+  color: var(--contrast-text-color);
+}
+
+.menu-item-container a {
+  text-decoration: none;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 20px 12px;
+  background: none;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border: 1px solid transparent;
+  color: var(--contrast-text-color);
+}
+
+.sidebar.collapsed .menu-item {
+  justify-content: center;
+}
+
+.sidebar:hover.collapsed .menu-item {
+  justify-content: start;
+}
+
+.sidebar.collapsed .menu-item p {
+  display: none;
+}
+
+.sidebar:hover.collapsed .menu-item p {
+  display: unset;
+}
+
+.menu-item:hover {
+  border: 1px solid var(--primary-color);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+
+  & svg {
+    path {
+      fill: var(--primary-color);
+    }
+  }
+}
+
+.menu-item.active {
+  border: 1px solid var(--primary-color);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: 700;
+
+  & svg {
+    path {
+      fill: var(--primary-color);
+    }
+  }
+}
+
+svg.icon {
+  width: 20px;
+
+  path {
+    fill: var(--contrast-text-color);
+  }
+}
+
+.chevron {
+  margin-left: auto;
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s;
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+.sidebar.collapsed .chevron {
+  display: none;
+}
+
+.sidebar:hover.collapsed .chevron {
+  display: unset;
+}
+
+/* Sidebar Collapsed */
+.sidebar.collapsed .submenu {
+  max-height: 0;
+  /* Ensures the submenu stays closed */
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.sidebar.collapsed:hover .submenu.open {
+  margin-block: 10px;
+  max-height: 2000px;
+  /* Expand submenu on hover when collapsed */
+}
+
+.sidebar.collapsed .submenu.open {
+  margin-block: 0px;
+}
+
+.sidebar:not(.collapsed) .submenu.open {
+  max-height: 2000px;
+  /* Ensure submenu works in expanded mode */
+}
+
+.submenu a {
+  color: var(--contrast-text-color);
+  text-decoration: none;
+}
+
+.submenu {
+  max-height: 0;
+  /* Initially closed */
+  overflow: hidden;
+  /* Prevents content from overflowing */
+  transition: all 0.3s ease-out;
+  /* Smooth transition */
+}
+
+.submenu.open {
+  margin-block: 10px;
+  max-height: 2000px;
+  /* A large enough value to ensure submenu content is visible */
+}
+
+.submenu-item.active {
+  color: var(--secondary-color);
+}
+
+.submenu-item {
+  text-align: left;
+  /* text-wrap: nowrap; */
+  border: 1px solid transparent;
+  padding: 6px 42px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+a:hover .submenu-item {
+  color: var(--secondary-color);
+}
+
+/* Scrollbar css */
+
+.dropdown-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.dropdown-container::-webkit-scrollbar-track {
+  cursor: grab;
+}
+
+.dropdown-container::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  cursor: grab;
+}
+
+.dropdown-container::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+
+@media screen and (max-width: 991px) {}
+
+@media screen and (max-width: 767px) {
+  .toggleSidebarButton {
+    display: none;
+  }
+
+  .sidebar.collapsed {
+    width: 0;
+  }
+
+  .sidebar.collapsed .sideLink {
+    display: none;
+  }
+
+  .sidebar:hover.collapsed .sideLink {
+    display: unset;
+  }
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 97;
+  cursor: not-allowed;
+}

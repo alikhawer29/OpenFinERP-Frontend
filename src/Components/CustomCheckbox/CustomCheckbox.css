@@ -1,0 +1,31 @@
+.checkbox-component-wrapper {
+  padding: 8px;
+  border-radius: 8px;
+  /* width: max-content; */
+  border: 1px solid var(--border-color-light);
+  margin-bottom: 12px;
+  color: var(--input-label-color);
+}
+.checkbox-label {
+  font-size: 16px;
+}
+.readonly {
+  cursor: default !important;
+}
+.readonly .custom-checkbox,
+.readonly .checkbox-container {
+  cursor: default !important;
+}
+.readonly .checkbox-container input + .custom-checkbox:hover {
+  border-color: #ccc !important;
+}
+@media screen and (max-width: 767px) {
+  .checkbox-label {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .checkbox-label {
+    font-size: 13px;
+  }
+}

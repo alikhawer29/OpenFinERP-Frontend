@@ -1,0 +1,7 @@
+.detailsWrapper {
+  max-width: 710px;
+  flex-wrap: wrap;
+}
+.detailItem {
+  width: 210px;
+}

@@ -1,0 +1,313 @@
+.combined-select-container {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%; /* Prevent overflow in Bootstrap columns */
+}
+
+.combined-select-container * {
+  box-sizing: border-box;
+}
+
+.combined-select-input {
+  display: flex;
+  margin-top: 2px;
+  border: 1px solid rgba(100, 100, 100, 0.22);
+  border-radius: 5px;
+  /* background-color: var(--input-bg-color, white); */
+  overflow: hidden;
+  /* min-height: 47px; */
+  align-items: stretch;
+}
+
+.combined-select-input .react-select__control {
+  margin-top: 0px !important;
+}
+
+.combined-select-input .mainInput {
+  margin: 0px;
+}
+
+.combined-select-input .inputWrapper {
+  margin: 0px;
+}
+
+/* Add focus-within and update hover styles to match CustomInput */
+.combined-select-input:focus-within {
+  border-color: var(--input-focus-color) !important;
+  box-shadow: none;
+}
+
+.combined-select-left,
+.combined-select-right {
+  /* flex: 1 1 0; */
+  min-width: 0; /* Allow flex items to shrink below content size */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.separator-between-selects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  color: rgba(100, 100, 100, 0.5);
+  font-weight: normal;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.separator-disabled {
+  background-color: var(--body-bg-color) !important;
+}
+
+/* Generic styles for all select components */
+[class$='-select'] {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Generic styles for all input components */
+[class$='-input'] {
+  width: 100%;
+  background-color: transparent;
+  color: var(--input-label-color, #333);
+  min-width: 0;
+  text-overflow: ellipsis;
+}
+
+[class$='-input']:focus {
+  outline: none;
+}
+
+[class$='-input']:disabled {
+  background-color: transparent;
+  cursor: not-allowed;
+}
+
+[class$='-input']::placeholder {
+  color: #666;
+}
+
+/* React-select specific styles */
+[class$='-select__control'] {
+  height: 100% !important;
+  /* min-height: 47px !important; */
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+[class$='-select__value-container'] {
+  padding: 2px 8px !important;
+  height: 100%;
+  min-width: 0;
+}
+
+[class$='-select__single-value'] {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  max-width: 100% !important;
+}
+
+[class$='-select__placeholder'] {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+[class$='-select__indicators'] {
+  height: 100%;
+  flex-shrink: 0;
+}
+
+[class$='-select__menu'] {
+  z-index: 9999 !important;
+}
+
+/* SearchableSelect menu list styles for fixed Add New button */
+.searchable-select-menu-list {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  height: 100%;
+}
+
+.scrollable-options {
+  max-height: 200px;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  position: relative;
+  z-index: 1;
+  will-change: scroll-position;
+  touch-action: pan-y;
+}
+
+.fixed-add-new-option {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.fixed-add-new-option > div {
+  text-align: center !important;
+  font-weight: 500;
+}
+
+/* Custom scrollbar styling */
+.scrollable-options::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-options::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}
+
+.scrollable-options::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.scrollable-options::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+.error-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.input-error-message {
+  font-size: 12px;
+  margin-top: 4px;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.disabled-error {
+  background-color: #f5f5f5;
+}
+
+/* Bootstrap responsive breakpoints */
+@media screen and (max-width: 991px) {
+  .combined-select-input {
+    flex-wrap: wrap;
+  }
+  .separator-between-selects {
+    display: none;
+  }
+}
+/* Small devices (landscape phones, less than 576px) */
+@media (max-width: 575px) {
+  .combined-select-input {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .combined-select-left,
+  .combined-select-right {
+    flex: none;
+    width: 100%;
+    min-height: 44px;
+  }
+
+  /* Add visual separation between stacked inputs */
+  .combined-select-left {
+    border-bottom: 1px solid rgba(100, 100, 100, 0.22);
+  }
+
+  .combined-select-container {
+    font-size: 14px;
+  }
+
+  [class$='-select__control'] {
+    min-height: 44px !important;
+  }
+
+  .input-error-message {
+    font-size: 11px;
+  }
+
+  [class$='-select__value-container'] {
+    padding: 2px 6px !important;
+  }
+}
+
+/* Medium devices (tablets, less than 768px) */
+@media (max-width: 768px) and (min-width: 576px) {
+  .combined-select-left {
+    min-width: 80px; /* Prevent crushing on small tablets */
+  }
+
+  .separator-between-selects {
+    font-size: 14px;
+  }
+
+  [class$='-select__control'] {
+    min-height: 45px !important;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .combined-select-left {
+    min-width: 100px; /* More comfortable spacing on desktop */
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .combined-select-left {
+    min-width: 120px;
+  }
+}
+
+/* Ensure proper text handling in all scenarios */
+.combined-select-left *,
+.combined-select-right * {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Handle long labels */
+.combined-select-container .mainLabel {
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.combined-select-container label {
+  margin-left: 4px;
+  font-size: 16px;
+}
+@media screen and (max-width: 991px) {
+  .combined-select-container label {
+    font-size: 14px;
+    left: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .combined-select-container label {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .combined-select-container label {
+    left: 6px;
+  }
+  .mainInput {
+    padding: 8px;
+  }
+}

@@ -1,0 +1,7 @@
+.time-slots-table-body {
+  vertical-align: middle;
+}
+
+.time-slots-table-body td {
+  vertical-align: middle !important;
+}

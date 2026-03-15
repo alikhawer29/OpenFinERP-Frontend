@@ -1,0 +1,25 @@
+.pnl-button {
+  margin-bottom: 1.25rem;
+  padding: 0.5rem 1.2rem;
+  width: 100%;
+  text-align: start;
+  color: var(--input-label-color);
+  background-color: var(--body-bg-color);
+  border: none;
+  border-radius: 0;
+  transition: all 0.2s ease-out;
+}
+
+.pnl-button:hover,
+.pnl-button.active {
+  background-color: color-mix(
+    in srgb,
+    var(--secondary-text-color) 40%,
+    transparent 50%
+  );
+  transition: all 0.3s ease-out;
+}
+
+.pnl-explanation {
+  color: var(--input-label-color);
+}

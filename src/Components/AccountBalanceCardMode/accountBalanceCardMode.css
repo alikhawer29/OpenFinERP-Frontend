@@ -1,0 +1,31 @@
+.account-balance-card {
+  border-radius: 5px !important;
+  padding: 8px 0 0 0 !important;
+  border: 1px solid #64646438 !important;
+  box-shadow: none !important;
+}
+.account-balance-card .account-name {
+  font-size: 16px !important;
+  font-weight: 500;
+  border-bottom: 1px solid #64646438 !important;
+  color: #6b7280;
+  padding: 0 16px 5px 16px !important;
+  margin-bottom: 0 !important;
+}
+.account-balance-card thead tr {
+  border-bottom: 1px solid #64646438 !important;
+}
+
+.account-balance-card th,
+.account-balance-card td {
+  padding: 8px 16px !important;
+  border-bottom: 1px solid #64646438 !important;
+  font-weight: 500 !important;
+}
+.account-balance-card tbody tr:last-child td {
+  border-bottom: none !important;
+}
+
+.account-balance-card .balance-row {
+  font-weight: 500 !important;
+}

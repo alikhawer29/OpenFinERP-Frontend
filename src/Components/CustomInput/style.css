@@ -1,0 +1,177 @@
+.inputWrapper {
+  margin-bottom: 1rem;
+  /* margin-top: 1.75rem; */
+  position: relative;
+  box-sizing: border-box;
+  min-width: 180px;
+}
+
+.inputWrapper label {
+  margin-left: 4px;
+  color: var(--input-label-color);
+  font-size: 16px;
+  font-style: normal;
+  /* user-select: none; */
+  transition: color 0.2s;
+}
+.mainInput::placeholder {
+  color: var(--secondary-text-color);
+}
+.mainInput,
+.react-tel-input .form-control.mainInput {
+  width: 100%;
+  height: auto;
+  padding: 12px 12px 12px 16px;
+  margin-top: 2px;
+  border-width: 1px;
+  border-style: solid;
+  /* border-color: transparent; */
+  /* border-color: var(--secondary-text-color); */
+  border-color: rgba(100, 100, 100, 0.22);
+  border-radius: 5px;
+  color: var(--input-label-color);
+  background-color: var(--input-bg-color);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+.mainInput:disabled {
+  background-color: var(--body-bg-color) !important;
+}
+.tableInputs {
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+  background-color: var(--content-bg-color) !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tableSearch {
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.paddingWithRightIcon {
+  padding: 12px 26px 10px 21px;
+}
+.mainInput:focus,
+.react-tel-input .form-control.mainInput:focus {
+  border-color: var(--input-focus-color);
+  box-shadow: none;
+}
+.PhoneInput--focus {
+  border-color: var(--input-focus-color) !important;
+  box-shadow: none;
+}
+.loginInput {
+  color: var(--white-bg);
+}
+.loginInput::placeholder {
+  color: var(--secondary-text-color) !important;
+}
+.loginInput:focus {
+  border-color: var(--white-bg);
+  box-shadow: none;
+}
+
+.inputWrapper:focus-within label,
+.inputWrapper:focus-within .right-icon {
+  color: var(--input-label-color);
+}
+.passwordWrapper {
+  position: relative;
+}
+.passInput {
+  padding-right: 3rem;
+}
+.input-icon {
+  padding: 10px 25px 10px 35px;
+  font-size: 15px;
+  width: 100%;
+  resize: none;
+  border-radius: 14px;
+  border: 1px solid #f7ece8;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(247, 236, 232, 0.29);
+  outline: none;
+}
+.right-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 12px;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  line-height: 1;
+  color: #707c8b;
+  transition: color 0.15s;
+}
+.mainInput:has(+ .right-icon) {
+  padding-right: 3rem;
+}
+.PhoneInputInput {
+  background: transparent;
+  border: none;
+}
+.PhoneInput {
+  padding-bottom: 10px !important;
+}
+.PhoneInputInput:focus-visible {
+  border: none !important;
+  outline: none;
+}
+@media screen and (max-width: 991px) {
+  .inputWrapper label {
+    font-size: 14px;
+    left: 14px;
+  }
+  .mainInput {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  .react-tel-input .form-control.mainInput {
+    font-size: 14px;
+  }
+  .PhoneInput {
+    padding: 8px 22px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .inputWrapper label {
+    font-size: 13px;
+  }
+  .mainInput {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+  .react-tel-input .form-control.mainInput {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .mainInput:has(+ .right-icon) {
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .inputWrapper label {
+    left: 6px;
+  }
+  .mainInput {
+    padding: 8px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .inputWrapper {
+    min-width: 120px;
+    width: 100%;
+  }
+}
