@@ -286,7 +286,7 @@ For support and questions:
 
 ## Related Projects
 
-- **Backend**: [OpenFinERP Backend](https://github.com/alikhawer29/OpenFinERP-Backend)
+- **Backend**: [OpenFinERP Backend](https://github.com/alikhawer29/OpenFinERP)
 - **API Documentation**: Available in the backend repository
 
 ---
